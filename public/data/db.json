@@ -1,0 +1,40 @@
+{
+  "body" : [
+    {
+      "title" : "Harry Potter",
+      "version" : 7,
+      "popularity" : "top-seller",
+      "genre" : "Action"
+    },
+    {
+      "title" : "Bean",
+      "version" : 2,
+      "popularity" : "top-seller",
+      "genre" : "Adventure"
+    },
+    {
+      "title" : "Macbeth",
+      "version" : 1,
+      "popularity" : "boring",
+      "genre" : "Tragedy"
+    },
+    {
+      "title" : "Sicilian",
+      "version" : 10,
+      "popularity" : "medium",
+      "genre" : "Action"
+    },
+    {
+      "title" : "Italian",
+      "version" : 10,
+      "popularity" : "medium",
+      "genre" : "Action"
+    },
+    {
+      "title" : "Queen's Gambit",
+      "version" : 10,
+      "popularity" : "medium",
+      "genre" : "Action"
+    }
+  ]
+}
