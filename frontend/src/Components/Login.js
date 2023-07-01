@@ -6,9 +6,8 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = "http://localhost:4000/db/Users/Login";
     const info = { Email, Password };
-    const response = await fetch(url, {
+    const response = await fetch('/db/Users/Login', {
       method: "POST",
       body: JSON.stringify(info),
       headers: {

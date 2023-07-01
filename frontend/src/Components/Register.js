@@ -7,9 +7,8 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const url = "http://localhost:4000/db/Users/Create";
     const info = { Name, Password, Email };
-    const response = await fetch(url, {
+    const response = await fetch('/db/Users/Create', {
       method: "POST",
       body: JSON.stringify(info),
       headers: {

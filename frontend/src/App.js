@@ -169,9 +169,9 @@ function App() {
               </div>
             </section>
             <div className={close ? "searchbox" : "closed"}>
-              {data
-                .filter((post) => {
-                  if (change === "") {
+              {data// eslint-disable-next-line
+                .filter((post) => { 
+                  if (change === "") {// eslint-disable-next-line
                     return;
                   } else if (
                     post.title.toLowerCase().includes(change.toLowerCase())
