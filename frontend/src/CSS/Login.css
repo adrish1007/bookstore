@@ -1,0 +1,221 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+.login-page {
+  padding: 8% 0 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+}
+.form {
+  position: relative;
+  background: #ffffff;
+  width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  transform: scale(1.3, 1.4);
+}
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  height: 50px;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 19px;
+}
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #4caf50;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #ffffff;
+  font-size: 19px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.form button:hover,
+.form button:active,
+.form button:focus {
+  background: #43a047;
+}
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+.form .message a {
+  color: #4caf50;
+  text-decoration: none;
+}
+/* .form .register-form {
+  display: none;
+} */
+
+.closed {
+  display: none;
+}
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.container:before,
+.container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+.container .info span .fa {
+  color: #ef3b3a;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 86.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 0.9rem 3rem;
+  border-radius: 0.5rem;
+  color: white;
+  background-color: green;
+  font-size: 1.7rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+section {
+  padding: 1.3rem 9%;
+}
+
+.home {
+  background: url("https://img.freepik.com/free-vector/abstract-banner-with-shiny-wavy-lines-vector_1055-8843.jpg?size=626&ext=jpg")
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home .row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.home .row .content {
+  flex: 1 1 42rem;
+}
+
+.home .row .books-slider {
+  flex: 1 1 42rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.home .row .books-slider a img {
+  height: 19rem;
+  z-index: 1;
+  width: 85%;
+  position: relative;
+  left: 32%;
+  top: 80px;
+}
+
+.home .row .books-slider a:hover img {
+  transform: scale(0.8);
+}
+
+.home .row .books-slider .stand {
+  width: 110%;
+  margin-top: -25rem;
+  margin-left: 2em;
+}
+
+.home .row .content h3 {
+  color: black;
+  font-size: 4.5rem;
+}
+
+.home .row .content p {
+  font-size: 1.2rem;
+  line-height: 2;
+  padding: 1rem 0;
+}
+
+.icons-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 6rem;
+}
+
+.icons-container .icons {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+.icons-container .icons i {
+  font-size: 5.5rem;
+  color: green;
+}
+
+.icons-container .icons h3 {
+  font-size: 1.5rem;
+  color: black;
+  padding-bottom: 0.5rem;
+}
+
+.icons-container .icons p {
+  font-size: 1.3rem;
+  letter-spacing: 0.2px;
+  width: 100%;
+  color: black;
+}

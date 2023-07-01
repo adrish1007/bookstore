@@ -1,0 +1,107 @@
+[
+  {
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSeRn7EPaFqHrCZuASm0p3hf9kLSngcVGzk-A&usqp=CAU",
+    "name": "The Book Thief",
+    "price": 499,
+    "nprice": 439,
+    "discount": 12
+  },
+  {
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9pFad1ryET1b_3shMTN0uLCbQbzL2GLmGTA&usqp=CAU",
+    "name": "Brain Games",
+    "price": 487,
+    "nprice": 439,
+    "discount": 10
+  },
+  {
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRisitsXflFwqG47SkOEtvlULKIfBdLus0v3Q&usqp=CAU",
+    "name": "Remember Me",
+    "price": 1099,
+    "nprice": 857,
+    "discount": 22
+  },
+  {
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkhr7RuQ0l6aSH8tDeEeuFpl7KAnx4eoR4OQ&usqp=CAU",
+    "name": "The Little Prince",
+    "price": 399,
+    "nprice": 259,
+    "discount": 35
+  },
+  {
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7R7T24Jm3AuOLMRyw4y4YCieJXO1TlcAM1g&usqp=CAU",
+    "name": "Gone With The Wind",
+    "price": 1699,
+    "nprice": 1257,
+    "discount": 26
+  },
+  {
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrrAwldhVPUdhrrjFa8zQACk-7nYikC6Xazg&usqp=CAU",
+    "name": "Mog's Birthday",
+    "price": 499,
+    "nprice": 439,
+    "discount": 12
+  },
+  {
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhSaJ_j2p8rqdlxXjv0nUXAcUWg8G2NGobyA&usqp=CAU",
+    "name": "The Ambassadors",
+    "price": 499,
+    "nprice": 439,
+    "discount": 12
+  },
+  {
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS_t13M1he-JOp3l8rTBJ8UGypoReL2z1Gxw&usqp=CAU",
+    "name": "The Girl is His Shadow",
+    "price": 499,
+    "nprice": 439,
+    "discount": 12
+  },
+  {
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCs9MibYfVIbkFSeaHdbwCGaL8PK1n5qx3vQ&usqp=CAU",
+    "name": "The Crusader's Cross",
+    "price": 499,
+    "nprice": 439,
+    "discount": 12
+  },
+  {
+    "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzQ6WIe_tP_y8RGD2W8IitY9rDoWPv9jeqZQ&usqp=CAU",
+    "name": "The Confidence Solution",
+    "price": 499,
+    "nprice": 439,
+    "discount": 12
+  },
+  {
+    "img": "https://ik.imagekit.io/panmac/tr:f-auto,di-placeholder_portrait_aMjPtD9YZ.jpg,w-270/edition/9781529077209.jpg",
+    "name": "The Line of Beauty",
+    "price": 499,
+    "nprice": 439,
+    "discount": 12
+  },
+  {
+    "img": "https://ik.imagekit.io/panmac/tr:f-auto,di-placeholder_portrait_aMjPtD9YZ.jpg,w-270/edition/9781529077261.jpg",
+    "name": "White Noise",
+    "price": 499,
+    "nprice": 439,
+    "discount": 12
+  },
+  {
+    "img": "https://ik.imagekit.io/panmac/tr:f-auto,di-placeholder_portrait_aMjPtD9YZ.jpg,w-270/edition/9781529077155.jpg",
+    "name": "American Psycho",
+    "price": 499,
+    "nprice": 439,
+    "discount": 12
+  },
+  {
+    "img": "https://ik.imagekit.io/panmac/tr:f-auto,di-placeholder_portrait_aMjPtD9YZ.jpg,w-270/edition/9781529077216.jpg",
+    "name": "A Little Life",
+    "price": 499,
+    "nprice": 439,
+    "discount": 12
+  },
+  {
+    "img": "https://assets-eu-01.kc-usercontent.com/bcd02f72-b50c-0179-8b4b-5e44f5340bd4/fc8d7134-edee-4218-b88d-12f62b958678/The%20God%20of%20Small%20Things%20cover.jpg?w=270&h=407&auto=format&bg=%23efefef&fit=crop",
+    "name": "The God of Small Things",
+    "price": 499,
+    "nprice": 439,
+    "discount": 12
+  }
+]

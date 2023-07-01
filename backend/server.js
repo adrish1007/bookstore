@@ -1,0 +1,37 @@
+require("dotenv").config();
+
+const bodyParser = require("body-parser");
+const express = require("express");
+const customer_routes = require("./routes/userRoutes");
+const cors = require("cors");
+const mongoose = require("mongoose");
+
+//express app
+const app = express();
+const port = process.env.PORT || 4000;
+const dbURI = process.env.MONG_URI;
+
+//middleware
+app.use(bodyParser.json());
+app.use(cors());
+app.use(express.json());
+
+//routes
+app.use("/db", customer_routes);
+
+app.get("/", (req, res) => {
+  res.send(
+    "This is the Backend Server of the Bookstore Site. Visit the desired URLs in the code to see its working"
+  );
+});
+
+// connecting to mongoDB Atlas server
+mongoose
+  .connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => {
+    app.listen(port);
+    console.log(`Server Running On Port ${port}`);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
