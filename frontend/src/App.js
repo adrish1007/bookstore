@@ -19,7 +19,7 @@ function App() {
   const handleLogout = () => {
     setUser({});
     localStorage.clear();
-    window.location.href = "https://bookapp-client-l1yo.onrender.com";
+    window.location.href = "http://localhost:3000";
   };
   const [click, setClick] = useState(true);
 
@@ -58,7 +58,7 @@ function App() {
                   alt=""
                   height="70px"
                   width="65px"
-                />                
+                />
                 <h1>Bookly</h1>
                 <p>
                   <input
@@ -170,7 +170,7 @@ function App() {
             </section>
             <div className={close ? "searchbox" : "closed"}>
               {data// eslint-disable-next-line
-                .filter((post) => { 
+                .filter((post) => {
                   if (change === "") {// eslint-disable-next-line
                     return;
                   } else if (
