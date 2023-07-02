@@ -19,11 +19,11 @@ const Register = () => {
         setPassword("");
         setName("");
         console.log("customer found", response.data.Name);
-        window.location.href = "http://localhost:3000/Login";
+        window.location.href = "https://bookapp-client-l1yo.onrender.com/Login";
       })
       .catch(err => {
         alert("User already exists");
-        window.location.href = "http://localhost:3000/Register";
+        window.location.href = "https://bookapp-client-l1yo.onrender.com/Register";
       });
   };
   return (
