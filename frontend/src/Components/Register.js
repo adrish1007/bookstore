@@ -9,7 +9,7 @@ const Register = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const info = { Name: name, Password: password, Email: email };
-    axios.post('/db/Users/Create', info, {
+    axios.post('https://bookapp-3crg.onrender.com/db/Users/Create', info, {
       headers: {
         'Content-Type': 'application/json'
       }

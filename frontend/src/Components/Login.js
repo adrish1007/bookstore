@@ -8,7 +8,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const info = { Email: email, Password: password };
-    axios.post('/db/Users/Login', info, {
+    axios.post('https://bookapp-3crg.onrender.com/db/Users/Login', info, {
       headers: {
         'Content-Type': 'application/json'
       }
