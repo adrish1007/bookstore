@@ -6,10 +6,10 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     const info = { Name: name, Password: password, Email: email };
-    const response = await axios.post('/db/Users/Create', info, {
+    axios.post('/db/Users/Create', info, {
       headers: {
         'Content-Type': 'application/json'
       }
