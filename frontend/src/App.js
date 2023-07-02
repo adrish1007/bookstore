@@ -73,7 +73,7 @@ function App() {
                 </p>
                 {user && (
                   <div className="Logged">
-                    <h3>Logout</h3>
+                    <h3>{user}</h3>
                     <button onClick={handleLogout} className="LogButton">
                       <i class="fa fa-sign-out" aria-hidden="true"></i>
                     </button>
