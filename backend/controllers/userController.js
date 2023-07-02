@@ -21,6 +21,15 @@ const create_user = async (req, res) => {
   }
 };
 
+const all_users = async(req,res) => {
+  try{
+    const users = await User.find();
+    res.json(users)
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+}
+
 const user_info = async (req, res) => {
   try {
     const { Email, Password } = req.body;
@@ -38,4 +47,5 @@ const user_info = async (req, res) => {
 module.exports = {
   create_user,
   user_info,
+  all_users
 };

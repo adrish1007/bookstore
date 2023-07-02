@@ -8,7 +8,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const info = { Email: email, Password: password };
-    const response = await axios.post('/db/Users/Login', info , {
+    const response = await axios.post('/db/Users/Login', info, {
       headers: {
         'Content-Type': 'application/json'
       }
