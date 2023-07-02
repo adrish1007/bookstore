@@ -13,17 +13,18 @@ const Login = () => {
         'Content-Type': 'application/json'
       }
     })
-    if (response.status) {
-      localStorage.setItem("user", response.data.Name);
-      setEmail("");
-      setPassword("");
-      console.log("customer found", response.data.Name);
-      window.location.href = "http://localhost:3000";
-    } else {
-      alert("User doesn't exist please check your credentials");
-      setEmail("");
-      setPassword("");
-    }
+      .then(response => {
+        localStorage.setItem("user", response.data.Name);
+        setEmail("");
+        setPassword("");
+        console.log("customer found", response.data.Name);
+        window.location.href = "http://localhost:3000";
+      })
+      .catch(err => {
+        alert("User doesn't exist please check your credentials");
+        setEmail("");
+        setPassword("");
+      });
   };
   return (
     <>

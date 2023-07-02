@@ -14,16 +14,17 @@ const Register = () => {
         'Content-Type': 'application/json'
       }
     })
-    if (response.status) {
-      setEmail("");
-      setPassword("");
-      setName("");
-      console.log("customer found", response.data.Name);
-      window.location.href = "http://localhost:3000/Login";
-    } else {
-      alert("User already exists");
-      window.location.href = "http://localhost:3000/Register";
-    }
+      .then(response => {
+        setEmail("");
+        setPassword("");
+        setName("");
+        console.log("customer found", response.data.Name);
+        window.location.href = "http://localhost:3000/Login";
+      })
+      .catch(err => {
+        alert("User already exists");
+        window.location.href = "http://localhost:3000/Register";
+      });
   };
   return (
     <>
