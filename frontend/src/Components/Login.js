@@ -19,7 +19,7 @@ const Login = () => {
         setEmail("");
         setPassword("");
         console.log("customer found", response.data.Name);
-        window.location.href = "http://localhost:3000/";
+        window.location.href = "https://main--relaxed-torrone-590e0d.netlify.app/";
       })
       .catch(err => {
         alert("User doesn't exist please check your credentials");

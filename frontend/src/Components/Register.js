@@ -20,11 +20,11 @@ const Register = () => {
         setPassword("");
         setName("");
         console.log("customer found", response.data.Name);
-        window.location.href = "http://localhost:3000/Login";
+        window.location.href = "https://main--relaxed-torrone-590e0d.netlify.app/Login";
       })
       .catch(err => {
         alert("User already exists");
-        window.location.href = "http://localhost:3000/Register";
+        window.location.href = "https://main--relaxed-torrone-590e0d.netlify.app/Register";
       });
   };
   return (

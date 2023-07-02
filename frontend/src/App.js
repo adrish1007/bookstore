@@ -19,7 +19,7 @@ function App() {
   const handleLogout = () => {
     setUser({});
     localStorage.clear();
-    window.location.href = "http://localhost:3000/";
+    window.location.href = "https://main--relaxed-torrone-590e0d.netlify.app/";
   };
   const [click, setClick] = useState(true);
 
