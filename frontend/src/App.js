@@ -19,7 +19,7 @@ function App() {
   const handleLogout = () => {
     setUser({});
     localStorage.clear();
-    window.location.href = "http://localhost:3000";
+    window.location.href = "https://bookapp-client-l1yo.onrender.com";
   };
   const [click, setClick] = useState(true);
 

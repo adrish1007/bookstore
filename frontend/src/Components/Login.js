@@ -18,7 +18,7 @@ const Login = () => {
         setEmail("");
         setPassword("");
         console.log("customer found", response.data.Name);
-        window.location.href = "http://localhost:3000";
+        window.location.href = "https://bookapp-client-l1yo.onrender.com";
       })
       .catch(err => {
         alert("User doesn't exist please check your credentials");
