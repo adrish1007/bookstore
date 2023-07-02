@@ -20,6 +20,9 @@ app.use(function (req, res, next) {
   res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
   next();
 });
+app.use(cors({
+  origin: ["http://localhost:3000/"]
+}))
 
 //routes
 app.use("/db", customer_routes);
