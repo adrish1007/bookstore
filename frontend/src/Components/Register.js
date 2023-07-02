@@ -1,4 +1,5 @@
 import "../CSS/Login.css";
+import axios from "axios";
 import { useState } from "react";
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -8,19 +9,16 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const info = { Name: name, Password: password, Email: email };
-    const response = await fetch('/db/Users/Create', {
-      method: "POST",
-      body: JSON.stringify(info),
+    const response = await axios.post('/db/Users/Create', info, {
       headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    const json = await response.json();
-    if (response.ok) {
+        'Content-Type': 'application/json'
+      }
+    })
+    if (response.status) {
       setEmail("");
       setPassword("");
       setName("");
-      console.log("customer found", json);
+      console.log("customer found", response.data.Name);
       window.location.href = "http://localhost:3000/Login";
     } else {
       alert("User already exists");
