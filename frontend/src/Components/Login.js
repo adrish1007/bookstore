@@ -1,12 +1,12 @@
 import "../CSS/Login.css";
 import { useState } from "react";
 const Login = () => {
-  const [Email, setEmail] = useState("");
-  const [Password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const info = { Email, Password };
+    const info = { Email: email, Password: password };
     const response = await fetch('/db/Users/Login', {
       method: "POST",
       body: JSON.stringify(info),
@@ -36,13 +36,13 @@ const Login = () => {
               type="text"
               placeholder="Email"
               onChange={(e) => setEmail(e.target.value)}
-              value={Email}
+              value={email}
             />
             <input
               type="password"
               placeholder="password"
               onChange={(e) => setPassword(e.target.value)}
-              value={Password}
+              value={password}
             />
             <button>login</button>
             <p class="message">

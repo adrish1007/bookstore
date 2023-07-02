@@ -1,13 +1,13 @@
 import "../CSS/Login.css";
 import { useState } from "react";
 const Register = () => {
-  const [Email, setEmail] = useState("");
-  const [Password, setPassword] = useState("");
-  const [Name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [name, setName] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const info = { Name, Password, Email };
+    const info = { Name: name, Password: password, Email: email };
     const response = await fetch('/db/Users/Create', {
       method: "POST",
       body: JSON.stringify(info),
@@ -36,19 +36,19 @@ const Register = () => {
               type="text"
               placeholder="Name"
               onChange={(e) => setName(e.target.value)}
-              value={Name}
+              value={name}
             />
             <input
               type="Password"
               placeholder="Password"
               onChange={(e) => setPassword(e.target.value)}
-              value={Password}
+              value={password}
             />
             <input
               type="text"
               placeholder="Email address"
               onChange={(e) => setEmail(e.target.value)}
-              value={Email}
+              value={email}
             />
             <button>create</button>
             <p class="message">
