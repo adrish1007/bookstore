@@ -14,6 +14,7 @@ const Login = () => {
       }
     })
       .then(response => {
+        if(response===undefined) throw 'no customer exist';
         localStorage.setItem("user", response.data.Name);
         setEmail("");
         setPassword("");

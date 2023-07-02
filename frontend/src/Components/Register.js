@@ -15,6 +15,7 @@ const Register = () => {
       }
     })
       .then(response => {
+        if (response === undefined) throw 'customer exists';
         setEmail("");
         setPassword("");
         setName("");
