@@ -1,5 +1,5 @@
 const Container = ({ title, object }) => {
-  
+
   return (
     <>
       <div className="found">
