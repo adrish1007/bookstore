@@ -1,7 +1,5 @@
 # Bookstore Website
 
-![Website Screenshot](/home/adrish/Pictures/Screenshots/Screenshot from 2023-07-04 00-42-38.png)
-
 This is a classic bookstore website that provides all the necessary features for users to browse and purchase books. The frontend is built with React.js, and the backend is developed using Node.js and Express.js. The user data is stored in a MongoDB database.
 
 ## General Info
