@@ -10,8 +10,8 @@
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9pFad1ryET1b_3shMTN0uLCbQbzL2GLmGTA&usqp=CAU",
     "name": "Brain Games",
     "price": 487,
-    "nprice": 439,
-    "discount": 10
+    "nprice": 487,
+    "discount": 0
   },
   {
     "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRisitsXflFwqG47SkOEtvlULKIfBdLus0v3Q&usqp=CAU",
@@ -73,8 +73,8 @@
     "img": "https://ik.imagekit.io/panmac/tr:f-auto,di-placeholder_portrait_aMjPtD9YZ.jpg,w-270/edition/9781529077209.jpg",
     "name": "The Line of Beauty",
     "price": 499,
-    "nprice": 439,
-    "discount": 12
+    "nprice": 499,
+    "discount": 0
   },
   {
     "img": "https://ik.imagekit.io/panmac/tr:f-auto,di-placeholder_portrait_aMjPtD9YZ.jpg,w-270/edition/9781529077261.jpg",

@@ -1,0 +1,128 @@
+/* Box.css */
+.Box {
+    text-align: center;
+    padding: 20px;
+}
+
+.title-bar {
+    background-color: #f8f9fa;
+    /* Change this to your preferred color */
+    padding: 10px;
+    margin: 20px;
+}
+
+.grid1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 5px;
+}
+
+.containers {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: left;
+}
+
+.sort-filter {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    left: -10px;
+}
+
+.sort-filter select {
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 70px;
+    margin-left: 1.5em;
+    text-align: center;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    left: 10px;
+}
+
+.page-item {
+    list-style: none;
+    margin: 10px 10px;
+    padding-left: 15px;
+}
+
+.page-link1 {
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-size: 25px;
+    background-color: aliceblue;
+}
+
+.page-link1:hover {
+    background-color: #eee;
+}
+
+.carousel1{
+    position: relative;
+    z-index: -1;
+    width: 65%;
+    margin: auto;
+    background-color: #f8f9fa;
+}
+
+.carousel1 .carousel-caption{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.carousel {
+    margin: 20px;
+    display: flex;
+    height: 75vh;
+    align-items: center;
+}
+
+.carousel-item {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+.carousel1 img {
+    position: relative;
+    width: 40% !important;
+    height: 300px;
+    margin: auto;
+    margin-bottom: 12rem;
+    margin-top: 5em;
+}
+
+.carousel1 .custom-arrow {
+    background-color: #f8f9fa;
+    /* Change this to your preferred color */
+    border: none;
+    color: black;
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.custom-prev {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.custom-next {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+}

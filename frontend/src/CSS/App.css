@@ -1,7 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+
 .Grid {
   margin-left: 12.9rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(25px);
+  background: rgba(255, 255, 255, 0.3);
+  /* Optional: to add a slight white overlay */
+  z-index: 1000;
+  pointer-events: none;
+  /* Prevent interactions with the overlay */
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.overlay.active {
+  opacity: 1;
+}
+
+.navbar {
+  background-color: #060b26;
+}
+
+.menu-bars {
+  margin-left: 2rem;
+  font-size: 2.5rem;
+  background: none;
+}
+
+.nav-menu {
+  background-color: #060b26;
+  width: 550px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 1050ms;
+  border-right: 6px ridge #f5f5f5;
+  z-index: 1001;
+}
+
+.nav-menu.active {
+  left: 0;
+  transition: 350ms;
+}
+
+.nav-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 0px 8px 16px;
+  list-style: none;
+  height: 90px;
+  font-family: 'Verdana', sans-serif;
+}
+
+.nav-text a {
+  text-decoration: none;
+  color: #f5f5f5;
+  font-size: 24px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.nav-text a:hover {
+  background-color: #57ff1a;
+  opacity: 0.8;
+  color: black;
+  font-weight: bolder;
+}
+
+.nav-menu-items {
+  width: 150%;
+}
+
+.navbar-toggle {
+  background-color: #060b26;
+  width: 100%;
+  height: 80px;
+  display: flex; 
+  justify-content: flex-start;
+  align-items: center;
+}
+
+span {
+  margin-left: 16px;
+}
+
+.input{
+  margin: auto;
+  padding: 20px;
+  font-size: 20px;
+  position: relative;
+  left: 282px;
+}
+
+.searchbar{
+  text-decoration: none;
+  padding: 22px;
+  margin-right: 10px;
+  font-size: 18px;
 }
 
 .Container {
@@ -10,6 +121,7 @@
   display: block;
   text-align: center;
   margin-bottom: 3.2rem;
+  z-index: -1;
   background-position: center;
 }
 
@@ -20,14 +132,24 @@
 .searchbox {
   font-family: Roboto, "SF Pro Display", Arial, sans-serif;
   position: absolute;
-  top: 7em;
-  left: 36.2em;
-  width: 58.4rem;
+  top: 4.9em;
+  left: 36.15em;
+  width: 52rem;
   background-color: white;
-  border-radius: 11px;
+  border: 1px ridge #060b26;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  color: #060b26;
+  z-index: 7;
+}
+
+.searchbox :hover{
+  background-color: lightgray;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
 }
 
 .Container h2 {
@@ -38,36 +160,30 @@
   top: 130px;
 }
 
-a:hover {
-  color: indigo;
-}
 
 .genres h1 {
   margin-right: 5px;
   padding: 2px;
 }
 
-.grid {
+.grid1 {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  margin: 2em;
-  margin-left: 4.5rem;
-  margin-top: 3em;
+  margin-top: 100px;
 }
 
 .containers {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 15.5rem;
   align-items: center;
   border: 4px solid brown;
   text-align: center;
-  padding: 2.2em;
-  margin: 1.3em;
-  margin-right: 3em;
+  padding: 3.2em;
+  margin: 4.3em;
+  margin-right: 2em;
   margin-bottom: 6em;
-  font-size: 16px;
+  font-size: 10px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
     rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
@@ -140,6 +256,7 @@ a:hover {
   color: brown;
   font-weight: bolder;
   justify-content: space-between;
+  text-decoration: none;
 }
 
 .Box a:hover {
@@ -198,9 +315,15 @@ a:hover {
 }
 
 .LogButton:hover {
-  background-color: indigo;
+  background-color: white;
   color: white;
 }
+
+.click1{
+  text-decoration: none;
+  color: black;
+}
+
 .click {
   border-radius: 35px;
   height: 42px;
@@ -224,73 +347,94 @@ a:hover {
   justify-content: space-between;
   align-items: center;
   padding: 3em;
+  font-family: Poppins, sans-serif;
+  font-weight: bold;
 }
 
-.part1 {
+.wrapper .part1 {
   display: flex;
   flex-direction: column;
+  padding: 1.5rem;
 }
 
-.part1 h1 {
+.wrapper .part1 h1 {
   color: darkgreen;
   font-size: 30px;
+  margin-bottom: 25px;
+  margin-top: 20px;
 }
-.part1 p {
+
+.wrapper .part1 h3{
+  color: darkgreen;
+  font-size: 20px;
+  margin-bottom: 25px;
+  margin-top: 35px;
+  font-weight: bold;
+}
+
+.wrapper .part1 p {
   width: 500px;
   font-size: 18px;
 }
-.part2 {
+.wrapper .part2 {
   position: relative;
   bottom: 30px;
   right: 20px;
 }
-.part3 {
+.wrapper .part3 {
   position: relative;
   bottom: 20px;
   left: 20px;
 }
 
-.part2 h1 {
+.wrapper .part2 h1 {
   color: darkgreen;
   font-size: 30px;
+  margin-bottom: 20px;
 }
 
-.part2 ul {
+.wrapper .part2 ul {
   position: relative;
   font-size: 20px;
-  right: 40px;
+  right: 26px;
   list-style: none;
+  cursor: pointer;
 }
 
-.part3 h1 {
+.wrapper .part3 h1 {
   color: navy;
   font-size: 30px;
+  margin-bottom: 20px;
 }
-.part3 ul {
+.wrapper .part3 ul {
   list-style: none;
   font-size: 20px;
   position: relative;
-  right: 40px;
+  right: 26px;
+  cursor: pointer;
 }
-.part4 {
+.wrapper .part4 {
   display: flex;
   flex-direction: column;
   margin: 30px;
 }
 
 .subscriber {
-  margin: 0px;
+  margin: 2px;
   border-radius: 8px;
   width: 300px;
-  height: 30px;
+  height: 38px;
 }
 
 .part4 h2 {
   color: navy;
+  margin-bottom: 10px;
 }
 
 .part4 button {
-  margin-top: 20px;
+  position: relative;
+  margin-top: 10px;
+  left: 2px;
   background-color: orange;
   width: 150px;
   height: 40px;
@@ -305,6 +449,7 @@ hr {
   margin-left: auto;
   margin-right: 35%;
   max-width: 400px;
+  cursor: pointer;
 }
 .social i {
   margin-top: 20px;

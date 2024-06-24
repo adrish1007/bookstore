@@ -38,7 +38,7 @@ const Footer = () => {
                 <div className="part4">
                     <h2>Subscribe More Info</h2>
                     <input type="text" placeholder="Enter your Email" className="subscriber" />
-                    <button onClick={() => window.location.href = "http://localhost:3000"}>Subscribe</button>
+                    <button onClick={() => window.location.href = "https://main--relaxed-torrone-590e0d.netlify.app/"}>Subscribe</button>
                 </div>
             </div>
             <hr />

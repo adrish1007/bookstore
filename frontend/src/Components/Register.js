@@ -4,7 +4,7 @@ import { useState } from "react";
 const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
+  const [name, setName] = useState("")
 
   const handleSubmit = (e) => {
     e.preventDefault();

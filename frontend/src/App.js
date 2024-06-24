@@ -7,14 +7,15 @@ import Login from "./Components/Login";
 import Register from "./Components/Register";
 import Cart from "./Components/Cart";
 import Footer from "./Components/Footer";
+import Navbar from "./Components/Navbar";
 import "./CSS/App.css";
+import { Services } from "./Components/Services";
+import { About } from "./Components/About";
 
 function App() {
-  const { data } = Fetch();
+  const [sidebar, setSidebar] = useState(false);
   const [title, setTitle] = useState("");
   const [obj, setObj] = useState();
-  const [close, setClose] = useState(true);
-  const [change, setChange] = useState("");
   const [user, setUser] = useState();
   const handleLogout = () => {
     setUser({});
@@ -22,19 +23,7 @@ function App() {
     window.location.href = "https://main--relaxed-torrone-590e0d.netlify.app/";
   };
   const [click, setClick] = useState(true);
-
-  const handle = (e, val) => {
-    e.preventDefault();
-    if (val !== "") setClick(false);
-    data.forEach((obj) => {
-      if (obj.title === val) {
-        setTitle(obj.title);
-        setObj(obj);
-        setClose(false);
-        setChange("");
-      }
-    });
-  };
+  
   useEffect(() => {
     const loggedInUser = localStorage.getItem("user");
     if (loggedInUser) {
@@ -42,8 +31,11 @@ function App() {
       setUser(foundUser);
     }
   }, []);
+
   return (
     <Router>
+      <Navbar sidebar={sidebar} setSidebar={setSidebar}/>
+      <div className={sidebar ? "overlay active" : "overlay"}></div>
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -51,48 +43,9 @@ function App() {
       <div className="App">
         <Switch>
           <Route exact path="/">
-            <header className="Navbar">
-              <div className="flex">
-                <img
-                  src="https://www.freeiconspng.com/thumbs/bookstore-icon/book-store-icon-31.png"
-                  alt=""
-                  height="70px"
-                  width="65px"
-                />
-                <h1>Bookly</h1>
-                <p>
-                  <input
-                    type="text"
-                    placeholder="Search here..."
-                    onChange={(e) => setChange(e.target.value)}
-                    value={change}
-                  />
-                  <button onClick={(e) => handle(e, change)} className="click">
-                    <i class="fa fa-search"></i>
-                  </button>
-                </p>
-                {user && (
-                  <div className="Logged">
-                    <h3>{user}</h3>
-                    <button onClick={handleLogout} className="LogButton">
-                      <i class="fa fa-sign-out" aria-hidden="true"></i>
-                    </button>
-                  </div>
-                )}
-                {!user && (
-                  <a href="/Login" className="Link1">
-                    <div className="heart">
-                      <i class="fa fa-heart-o"></i>
-                    </div>
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                  </a>
-                )}
-                <a href="/Cart" className="Link2">
-                  <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                </a>
-              </div>
+            <header className="Navbar1">          
               <div className="header-2">
-                <nav className="navbar">
+                <nav className="navbar2">
                   <a href="/">Home</a>
                   <a href="/">Featured</a>
                   <a href="/">Arrivals</a>
@@ -116,7 +69,9 @@ function App() {
                     occaecat cupidatat non proident, sunt in culpa qui officia
                     deserunt mollit anim id est laborum.
                   </p>
-                  <a href="/Box" className="btn">Shop Now</a>
+                  <a href="/Box" className="btn">
+                    Shop Now
+                  </a>
                 </div>
                 <div className="books-slider">
                   <div className="wrapper">
@@ -141,7 +96,8 @@ function App() {
                   </div>
                   <img
                     src="https://img.freepik.com/premium-photo/blank-shelf_92242-444.jpg?size=626&ext=jpg"
-                    alt="" className="stand"
+                    alt=""
+                    className="stand"
                   />
                 </div>
               </div>
@@ -150,7 +106,7 @@ function App() {
               <div className="icons">
                 <i className="fa fa-plane"></i>
                 <h3>free shipping</h3>
-                <p>order above Rs.100</p>
+                <p>order above Rs.300</p>
               </div>
               <div className="icons">
                 <i className="fa fa-lock"></i>
@@ -168,23 +124,6 @@ function App() {
                 <p>call us anytime</p>
               </div>
             </section>
-            <div className={close ? "searchbox" : "closed"}>
-              {data// eslint-disable-next-line
-                .filter((post) => {
-                  if (change === "") {// eslint-disable-next-line
-                    return;
-                  } else if (
-                    post.title.toLowerCase().includes(change.toLowerCase())
-                  ) {
-                    return post;
-                  }
-                })
-                .map((post, index) => (
-                  <div className="box" key={index}>
-                    <h3>{post.title}</h3>
-                  </div>
-                ))}
-            </div>
 
             <Footer />
           </Route>
@@ -199,6 +138,12 @@ function App() {
           </Route>
           <Route path="/Cart">
             <Cart />
+          </Route>
+          <Route path="/Services">
+            <Services />
+          </Route>
+          <Route path="/About">
+            <About />
           </Route>
         </Switch>
       </div>

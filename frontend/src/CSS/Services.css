@@ -1,0 +1,46 @@
+.services-container {
+    padding: 50px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.services-title {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.service {
+    padding: 30px;
+    background: linear-gradient(135deg, #fff, #f9f9f9);
+    border-radius: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service h2 {
+    font-size: 32px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.service p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+}

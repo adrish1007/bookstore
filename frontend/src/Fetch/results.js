@@ -9,7 +9,7 @@ const Results = ({ click, title, obj }) => {
         <div className="genres">
           <h1>Genres Available</h1>
           <h4>
-            <a href="/Box">(Click here to view all)</a>
+            <a href="/Box" className="click1">(Click here to view all)</a>
           </h4>
         </div>
         <Genres />

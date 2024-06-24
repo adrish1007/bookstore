@@ -4,4 +4,4 @@ const Fetch = () => {
   return ({ data })
 };
 
-export default Fetch;
+export default Fetch
